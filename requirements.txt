@@ -1,4 +1,3 @@
 dill
 xgboost
-sklearn
 scikit-learn
