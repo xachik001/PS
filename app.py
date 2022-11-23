@@ -25,7 +25,7 @@ st.write(f"Значения в диапазоне от {df['IF'].min()} до {df
 IF = st.number_input('IF', min_value=df['IF'].min(), max_value=df['IF'].max(), value=np.int64(df['IF'].mean()), step=np.int64(1))
 
 st.write(f"Значения в диапазоне от {df['VW'].min()} до {df['VW'].max()}")
-VW = st.number_input('VW', min_value=np.int64(df['VW'].min()), max_value=np.int64(df['VW'].max()), value=np.int64(df['VW'].mean()), step=np.int64(0.1))
+VW = st.number_input('VW', min_value=np.int64(df['VW'].min()), max_value=np.int64(df['VW'].max()), value=np.int64(df['VW'].mean()), step=np.int64(1))
 
 st.write(f"Значения в диапазоне от {df['FP'].min()} до {df['FP'].max()}")
 FP = st.number_input('FP', min_value=np.int64(df['FP'].min()), max_value=np.int64(df['FP'].max()), value=np.int64(df['FP'].mean()), step=np.int64(1))
