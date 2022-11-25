@@ -21,7 +21,7 @@ st.write('Введите данные для предсказания')
 # st.write(f"Значения величины сварочного тока в диапазоне от {df['IW'].min()} до {df['IW'].max()}")
 
 #step=0.1, all values as float
-IW = st.number_input('Введите значение величины сварочного тока', min_value=df['IW'].min(), max_value=np.float(df['IW'].max()), step=0.1, value=df['IW'].min())
+IW = st.number_input('Введите значение величины сварочного тока в диапазоне от {df['IW'].min()} до {df['IW'].max()}', min_value=df['IW'].min(), max_value=np.float(df['IW'].max()), step=0.1, value=df['IW'].min())
 
 
 
