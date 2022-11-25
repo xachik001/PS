@@ -21,18 +21,18 @@ st.write('Введите данные для предсказания')
 st.write(f"Значения величины сварочного тока в диапазоне от {df['IW'].min()} до {df['IW'].max()}")
 
 #step=0.1, all values as float
-IW = st.number_input('IW ', min_value=df['IW'].min(), max_value=np.float(df['IW'].max()), step=0.1, value=df['IW'].min())
+IW = st.number_input('IW ', min_value=df['IW'].min(), max_value=np.float(df['IW'].max()), step=0.5, value=df['IW'].min())
 
 
 
 st.write(f"Значения тока фокусировки электронного пучка в диапазоне от {df['IF'].min()} до {df['IF'].max()}")
-IF = st.number_input('IF', min_value=df['IF'].min(), max_value=df['IF'].max(), step=0.1, value=df['IF'].min())
+IF = st.number_input('IF', min_value=df['IF'].min(), max_value=df['IF'].max(), step=0.5, value=df['IF'].min())
 
 st.write(f"Значения скорости сварки в диапазоне от {df['VW'].min()} до {df['VW'].max()}")
-VW = st.number_input('VW', min_value=df['VW'].min(), max_value=df['VW'].max(), step=0.1, value=df['VW'].min())
+VW = st.number_input('VW', min_value=df['VW'].min(), max_value=df['VW'].max(), step=0.5, value=df['VW'].min())
 
 st.write(f"Значения расстояния от поверхности образцов до электронно-оптической системы в диапазоне от {df['FP'].min()} до {df['FP'].max()}")
-FP = st.number_input('FP', min_value=df['FP'].min(), max_value=df['FP'].max(), step=0.1, value=df['FP'].min())
+FP = st.number_input('FP', min_value=df['FP'].min(), max_value=df['FP'].max(), step=0.5, value=df['FP'].min())
 
 data = {'IW': IW, 'IF': IF, 'VW': VW, 'FP': FP} #создание словаря с данными
 
