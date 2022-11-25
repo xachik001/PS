@@ -41,6 +41,6 @@ prediction2 = model2.predict(pd.DataFrame(data, index=[0]))
 
 # кнопка
 # if st.button('Предсказать'):
-st.write('Прогнозз глубины сварного шва: ', round(prediction1[0],2)) #вывод предсказаний
-st.write('Прогнозз ширины сварного шва: ', round(prediction2[0],2))
+st.write('Прогнозз глубины сварного шва: ', round(prediction1[0],4)) #вывод предсказаний
+st.write('Прогнозз ширины сварного шва: ', round(prediction2[0],4))
 
