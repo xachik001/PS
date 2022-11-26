@@ -1,3 +1,4 @@
+# загружаем библиотеки
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -23,7 +24,7 @@ st.write(f"Значения величины сварочного тока в д
 #step=0.1, all values as float
 IW = st.number_input('IW ', min_value=df['IW'].min(), max_value=np.float(df['IW'].max()), step=0.5, value=df['IW'].min())
 
-
+#поля для ввода данных
 
 st.write(f"Значения тока фокусировки электронного пучка в диапазоне от {df['IF'].min()} до {df['IF'].max()}")
 IF = st.number_input('IF', min_value=df['IF'].min(), max_value=df['IF'].max(), step=0.5, value=df['IF'].min())
@@ -39,8 +40,7 @@ data = {'IW': IW, 'IF': IF, 'VW': VW, 'FP': FP} #создание словаря
 prediction1 = model1.predict(pd.DataFrame(data, index=[0])) #предсказание
 prediction2 = model2.predict(pd.DataFrame(data, index=[0]))
 
-# кнопка
-# if st.button('Предсказать'):
+
 st.write('Прогнозз глубины сварного шва: ', round(prediction1[0],4)) #вывод предсказаний
 st.write('Прогнозз ширины сварного шва: ', round(prediction2[0],4))
 
